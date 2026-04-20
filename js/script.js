@@ -139,9 +139,10 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ── Contact form ───────────────────────────────────────
+const FORMSPREE_ID = 'YOUR_FORM_ID'; // Replace with your Formspree form ID
 const form = document.getElementById('contactForm');
 if (form) {
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async e => {
         e.preventDefault();
         const name    = form.querySelector('[name="name"]').value.trim();
         const email   = form.querySelector('[name="email"]').value.trim();
@@ -151,15 +152,39 @@ if (form) {
             return;
         }
         const btn = form.querySelector('.f-submit');
-        btn.textContent = 'Message Sent ✓';
-        btn.classList.add('sent');
+        btn.textContent = 'Sending…';
         btn.disabled = true;
-        setTimeout(() => {
+
+        const data = {
+            name,
+            email,
+            interest: form.querySelector('[name="interest"]').value,
+            message
+        };
+
+        try {
+            const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            if (res.ok) {
+                btn.textContent = 'Message Sent ✓';
+                btn.classList.add('sent');
+                form.reset();
+                setTimeout(() => {
+                    btn.textContent = 'Send Message';
+                    btn.classList.remove('sent');
+                    btn.disabled = false;
+                }, 4500);
+            } else {
+                throw new Error('Server error');
+            }
+        } catch {
             btn.textContent = 'Send Message';
-            btn.classList.remove('sent');
             btn.disabled = false;
-            form.reset();
-        }, 4500);
+            alert('Something went wrong. Please email me directly at libran93@gmail.com');
+        }
     });
 }
 
