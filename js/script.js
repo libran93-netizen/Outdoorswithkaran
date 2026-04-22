@@ -139,7 +139,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ── Contact form ───────────────────────────────────────
-const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY'; // Replace with key from web3forms.com
+const WEB3FORMS_KEY = 'a8cd2d24-8896-4992-894f-69aaa1da8aa7';
 const form = document.getElementById('contactForm');
 if (form) {
     form.addEventListener('submit', async e => {
