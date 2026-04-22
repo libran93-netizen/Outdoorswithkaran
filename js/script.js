@@ -139,7 +139,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ── Contact form ───────────────────────────────────────
-const FORMSPREE_ID = 'YOUR_FORM_ID'; // Replace with your Formspree form ID
+const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY'; // Replace with key from web3forms.com
 const form = document.getElementById('contactForm');
 if (form) {
     form.addEventListener('submit', async e => {
@@ -155,20 +155,22 @@ if (form) {
         btn.textContent = 'Sending…';
         btn.disabled = true;
 
-        const data = {
-            name,
-            email,
-            interest: form.querySelector('[name="interest"]').value,
-            message
-        };
-
         try {
-            const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+            const res = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_KEY,
+                    subject: `New enquiry from ${name} – OutdoorsWithKaran`,
+                    name,
+                    email,
+                    interest: form.querySelector('[name="interest"]').value,
+                    message,
+                    from_name: 'OutdoorsWithKaran Website'
+                })
             });
-            if (res.ok) {
+            const json = await res.json();
+            if (json.success) {
                 btn.textContent = 'Message Sent ✓';
                 btn.classList.add('sent');
                 form.reset();
@@ -178,7 +180,7 @@ if (form) {
                     btn.disabled = false;
                 }, 4500);
             } else {
-                throw new Error('Server error');
+                throw new Error(json.message);
             }
         } catch {
             btn.textContent = 'Send Message';
