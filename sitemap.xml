@@ -33,12 +33,66 @@
   </url>
   <url>
     <loc>https://www.outdoorswithkaran.com/blog</loc>
-    <lastmod>2026-04-23</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.outdoorswithkaran.com/photos/IMG_20220626_072608.jpg</image:loc>
       <image:title>Kang Yatse 2 Expedition Story – Outdoors With Karan Journal</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.outdoorswithkaran.com/blog/kang-yatse-2</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.outdoorswithkaran.com/photos/drive-download-20260413T195100Z-3-001/20220630_171032_0000__01.png</image:loc>
+      <image:title>Standing on Kang Yatse 2 at 6,250m – Ladakh Expedition</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.outdoorswithkaran.com/blog/yunam-peak</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.outdoorswithkaran.com/photos/IMG_20210928_090821.jpg</image:loc>
+      <image:title>Yunam Peak 6,150m – First 6000m Expedition, Lahaul</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.outdoorswithkaran.com/blog/children-himalayan-trail</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.outdoorswithkaran.com/blog/trek-leaders-kit</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.outdoorswithkaran.com/blog/hampi-edu-tour</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.outdoorswithkaran.com/blog/outdoor-learning-program</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.outdoorswithkaran.com/blog/rupin-pass-winter</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.outdoorswithkaran.com/photos/IMG_20201229_112649.jpg</image:loc>
+      <image:title>Rupin Pass in Winter – Trek Leader's Assessment</image:title>
     </image:image>
   </url>
 </urlset>
