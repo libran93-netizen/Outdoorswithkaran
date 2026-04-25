@@ -52,7 +52,7 @@
             <div class="filter-divider"></div>
             <button class="filter-tab" data-filter="nepal">Nepal</button>
             <button class="filter-tab" data-filter="spring">Spring (Mar–Jun)</button>
-            <button class="filter-tab" data-filter="summer">Summer (Jul–Aug)</button>
+            <button class="filter-tab" data-filter="monsoon">Monsoon (Jul–Aug)</button>
             <button class="filter-tab" data-filter="autumn">Autumn (Sep–Nov)</button>
             <button class="filter-tab" data-filter="winter">Winter (Dec–Apr)</button>
             <div class="filter-divider"></div>
@@ -162,16 +162,16 @@
                 </div>
             </div>
 
-            <!-- SUMMER WINDOW -->
-            <div class="treks-season-group" data-season="summer">
+            <!-- MONSOON SEASON -->
+            <div class="treks-season-group" data-season="monsoon">
                 <div class="season-label">
-                    <h3>Summer Season</h3>
+                    <h3>Monsoon Season</h3>
                     <div class="season-label-line"></div>
                     <span class="season-months">July – August</span>
                 </div>
                 <div class="treks-season-grid">
 
-                    <article class="trek-card" data-diff="moderate" data-season="summer">
+                    <article class="trek-card" data-diff="moderate" data-season="monsoon">
                         <div class="tc-img">
                             <img src="photos/KGL.jpg" alt="Krishansar Lake – Kashmir Great Lakes Trek" loading="lazy">
                             <span class="tc-badge tc-badge-season">July – August</span>
@@ -189,7 +189,7 @@
             </div>
 
             <!-- SPRING & AUTUMN CLASSIC TRAILS -->
-            <div class="treks-season-group" data-season="spring autumn summer">
+            <div class="treks-season-group" data-season="spring autumn monsoon">
                 <div class="season-label">
                     <h3>Classic Himalayan Trails</h3>
                     <div class="season-label-line"></div>
@@ -351,7 +351,7 @@
                     return;
                 }
 
-                const seasonMap = { nepal:'nepal', spring:'spring', summer:'summer', autumn:'autumn', winter:'winter' };
+                const seasonMap = { nepal:'nepal', spring:'spring', monsoon:'monsoon', autumn:'autumn', winter:'winter' };
                 const diffMap = { easy:'easy', moderate:'moderate', challenging:'challenging', expedition:'expedition' };
 
                 if (seasonMap[f]) {
