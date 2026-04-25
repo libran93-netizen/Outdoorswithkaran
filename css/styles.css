@@ -1000,7 +1000,15 @@ body {
     gap: 2rem;
 }
 
-.blog-head h2 { margin-bottom: 0; }
+.blog-head h2 { margin-bottom: 0.8rem; }
+
+.blog-intro {
+    font-size: 0.95rem;
+    color: var(--gray-dark);
+    line-height: 1.6;
+    max-width: 50rem;
+    margin: 0;
+}
 
 .blog-all {
     font-size: 0.8rem;
