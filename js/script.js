@@ -138,7 +138,70 @@ window.addEventListener('scroll', () => {
     });
 }, { passive: true });
 
-// ── Contact form (FormSubmit.co handles submission) ────
+// ── Contact form ───────────────────────────────────────
+const WEB3FORMS_KEY = 'a8cd2d24-8896-4992-894f-69aaa1da8aa7';
+const form = document.getElementById('contactForm');
+if (form) {
+    form.addEventListener('submit', async e => {
+        e.preventDefault();
+
+        const name    = form.querySelector('[name="name"]').value.trim();
+        const email   = form.querySelector('[name="email"]').value.trim();
+        const message = form.querySelector('[name="message"]').value.trim();
+
+        if (!name || !email || !message) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        const btn = form.querySelector('.f-submit');
+        const originalText = btn.textContent;
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+
+        try {
+            const payload = {
+                access_key: WEB3FORMS_KEY,
+                subject: `New enquiry from ${name}`,
+                name,
+                email,
+                interest: form.querySelector('[name="interest"]')?.value || '',
+                group_info: form.querySelector('[name="group_info"]')?.value || '',
+                message,
+                from_name: 'OutdoorsWithKaran.com'
+            };
+
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                btn.textContent = 'Message Sent ✓';
+                btn.classList.add('sent');
+                form.reset();
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.remove('sent');
+                    btn.disabled = false;
+                }, 4500);
+            } else {
+                throw new Error(data.message || 'Submission failed');
+            }
+        } catch (error) {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            console.error('Form error:', error);
+            alert(`Error: ${error.message}\n\nPlease email directly to libran93@gmail.com`);
+        }
+    });
+}
 
 // ── Gallery lightbox ───────────────────────────────────
 const lightbox = document.getElementById('lightbox');
