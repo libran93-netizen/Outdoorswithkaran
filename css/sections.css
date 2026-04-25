@@ -1,0 +1,741 @@
+/* =========================================================
+   OUTDOORS WITH KARAN — New Sections & Page Styles
+   (Supplement to styles.css — do not edit styles.css for these)
+   ========================================================= */
+
+/* ── UPCOMING TREKS SECTION ──────────────────────────── */
+.upcoming-treks {
+    background: var(--cream);
+    padding: 6rem 0;
+}
+
+.ut-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+.ut-header h2 { margin-bottom: 0; }
+
+.ut-all {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: 1px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.25s;
+    margin-bottom: 0.3rem;
+    border-bottom: 1.5px solid currentColor;
+    padding-bottom: 2px;
+}
+.ut-all:hover { color: var(--forest); letter-spacing: 2px; }
+
+/* Trek card grid */
+.treks-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+}
+
+/* ── TREK CARD COMPONENT ─────────────────────────────── */
+.trek-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.trek-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 56px rgba(0,0,0,0.11);
+}
+
+.tc-img {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.tc-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.65s var(--ease);
+}
+.trek-card:hover .tc-img img { transform: scale(1.07); }
+
+.tc-badge {
+    position: absolute;
+    top: 0.9rem;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 11px;
+    border-radius: 50px;
+}
+.tc-badge-season {
+    left: 0.9rem;
+    background: rgba(26, 51, 32, 0.88);
+    color: var(--white);
+    backdrop-filter: blur(4px);
+}
+.tc-badge-spots {
+    right: 0.9rem;
+    left: auto;
+    background: var(--gold);
+    color: var(--forest);
+}
+
+.tc-body {
+    padding: 1.4rem 1.4rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0;
+}
+
+.tc-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.55rem;
+}
+
+.tc-region {
+    font-size: 0.7rem;
+    color: var(--ink-light);
+    letter-spacing: 0.3px;
+}
+
+.tc-diff {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+.tc-easy       { background: rgba(61,122,82,0.1);   color: var(--green); }
+.tc-moderate   { background: rgba(61,122,82,0.12);  color: var(--green); }
+.tc-challenging{ background: rgba(180,80,30,0.1);   color: #b8501e; }
+.tc-expedition { background: rgba(26,51,32,0.1);    color: var(--forest); }
+
+.tc-body h3 {
+    font-family: var(--ff-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+    margin-bottom: 0.45rem;
+}
+
+.tc-stats {
+    font-size: 0.75rem;
+    color: var(--ink-light);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.2px;
+}
+.tc-sep { margin: 0 5px; opacity: 0.35; }
+
+.tc-desc {
+    font-size: 0.84rem;
+    color: var(--ink-light);
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+    flex: 1;
+}
+
+.tc-btn {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 0.5px;
+    transition: all 0.25s;
+    padding-bottom: 2px;
+    border-bottom: 1.5px solid currentColor;
+    align-self: flex-start;
+}
+.tc-btn:hover { color: var(--forest); letter-spacing: 1.5px; }
+
+/* ── WHY TREK WITH KARAN ─────────────────────────────── */
+.why-karan {
+    background: var(--white);
+    padding: 7rem 0;
+}
+
+.wk-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.wk-intro h2 { margin-bottom: 1.2rem; }
+
+.wk-lead {
+    font-size: 0.97rem;
+    color: var(--ink-light);
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+
+.btn-text-link {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: 1px;
+    transition: all 0.25s;
+    border-bottom: 1.5px solid currentColor;
+    padding-bottom: 2px;
+}
+.btn-text-link:hover { color: var(--forest); letter-spacing: 2px; }
+
+.wk-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.wk-tile {
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 1.8rem 1.6rem;
+    border-left: 3px solid var(--gold);
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.wk-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+}
+
+.wk-icon {
+    font-size: 1.7rem;
+    line-height: 1;
+    margin-bottom: 0.85rem;
+}
+
+.wk-tile h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+    line-height: 1.35;
+}
+
+.wk-tile p {
+    font-size: 0.82rem;
+    color: var(--ink-light);
+    line-height: 1.75;
+}
+
+/* ── TESTIMONIALS ────────────────────────────────────── */
+.testimonials {
+    background: var(--cream);
+    padding: 7rem 0;
+}
+
+.testimonials .section-head {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.testi-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 2.4rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.testi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 44px rgba(0,0,0,0.08);
+}
+
+.testi-q-icon {
+    width: 32px;
+    height: 24px;
+    color: var(--gold);
+    opacity: 0.35;
+    margin-bottom: 1.2rem;
+    flex-shrink: 0;
+}
+
+.testi-text {
+    font-family: var(--ff-display);
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--ink-mid);
+    flex: 1;
+    margin-bottom: 1.6rem;
+}
+
+.testi-author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--cream-dark);
+}
+.testi-author strong {
+    font-family: var(--ff-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ink);
+}
+.testi-author span {
+    font-size: 0.75rem;
+    color: var(--ink-light);
+}
+
+/* ── CTA BANNER ──────────────────────────────────────── */
+.cta-banner {
+    background: var(--forest);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.ctab-content { max-width: 680px; margin: 0 auto; }
+.cta-banner .eyebrow { color: var(--gold-light); }
+.cta-banner h2 { color: var(--white); margin-bottom: 1rem; }
+.cta-banner p {
+    color: rgba(255,255,255,0.68);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.ctab-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: #25D366;
+    color: var(--white);
+    padding: 13px 28px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    transition: all 0.3s var(--ease);
+    box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+}
+.cta-whatsapp:hover {
+    background: #20bc59;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(37,211,102,0.4);
+}
+.cta-whatsapp svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    flex-shrink: 0;
+}
+
+/* ── SHARED PAGE HERO (used by treks, about, work-with-me) */
+.page-hero {
+    background: var(--forest);
+    padding: 9rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+}
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(8,25,12,0.95) 0%, rgba(26,51,32,0.85) 100%);
+}
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+}
+.page-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 32px;
+    color: var(--white);
+}
+.page-hero-inner .eyebrow { color: var(--gold-light); }
+.page-hero-inner h1 {
+    font-family: var(--ff-display);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+.page-hero-inner p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.72);
+    max-width: 560px;
+    line-height: 1.8;
+}
+
+/* ── TREKS LISTING PAGE ──────────────────────────────── */
+.treks-filter-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--cream-dark);
+    position: sticky;
+    top: 72px;
+    z-index: 100;
+}
+.treks-filter-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    height: 56px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.treks-filter-inner::-webkit-scrollbar { display: none; }
+
+.filter-tab {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--ink-light);
+    padding: 6px 16px;
+    border-radius: 50px;
+    border: 1.5px solid transparent;
+    background: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: var(--ff-body);
+    transition: all 0.22s;
+}
+.filter-tab:hover { color: var(--green); border-color: var(--green); }
+.filter-tab.active {
+    background: var(--forest);
+    color: var(--white);
+    border-color: var(--forest);
+}
+
+.filter-divider {
+    width: 1px;
+    height: 20px;
+    background: var(--cream-dark);
+    flex-shrink: 0;
+    margin: 0 0.25rem;
+}
+
+.treks-main {
+    background: var(--cream);
+    padding: 4rem 0 6rem;
+}
+.treks-main .container { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
+
+.treks-season-group { margin-bottom: 4rem; }
+.treks-season-group:last-child { margin-bottom: 0; }
+
+.season-label {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
+}
+.season-label h3 {
+    font-family: var(--ff-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink);
+    white-space: nowrap;
+}
+.season-label-line {
+    flex: 1;
+    height: 1px;
+    background: var(--cream-dark);
+}
+.season-months {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green);
+    white-space: nowrap;
+}
+
+.treks-season-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+/* ── ABOUT PAGE ──────────────────────────────────────── */
+.about-page-story {
+    background: var(--white);
+    padding: 7rem 0;
+}
+.about-story-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 5rem;
+    align-items: start;
+}
+.about-portrait {
+    position: sticky;
+    top: 100px;
+}
+.about-portrait img {
+    width: 100%;
+    border-radius: var(--radius);
+    object-fit: cover;
+}
+.about-portrait-tag {
+    background: var(--forest);
+    color: var(--white);
+    padding: 1rem 1.4rem;
+    border-radius: var(--radius-sm);
+    margin-top: -3rem;
+    position: relative;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.about-portrait-tag .tag-line {
+    font-size: 0.62rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 0.2rem;
+}
+.about-portrait-tag .tag-main {
+    font-family: var(--ff-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--gold);
+}
+.about-story-text h2 { margin-bottom: 1.4rem; }
+.about-story-text .about-lead {
+    font-family: var(--ff-display);
+    font-size: 1.2rem;
+    line-height: 1.75;
+    color: var(--ink-mid);
+    margin-bottom: 1.2rem;
+}
+.about-story-text p {
+    font-size: 0.95rem;
+    color: var(--ink-light);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+}
+
+/* Timeline */
+.about-timeline {
+    background: var(--cream);
+    padding: 7rem 0;
+}
+.timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--cream-dark);
+    border: 1px solid var(--cream-dark);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-top: 3.5rem;
+}
+.timeline-item {
+    background: var(--white);
+    padding: 2.8rem;
+    display: flex;
+    gap: 1.6rem;
+    transition: background 0.3s;
+}
+.timeline-item:hover { background: var(--cream); }
+.timeline-num {
+    font-family: var(--ff-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--cream-dark);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 2.4rem;
+    transition: color 0.3s;
+}
+.timeline-item:hover .timeline-num { color: var(--gold); }
+.timeline-period {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 0.4rem;
+}
+.timeline-body h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+}
+.timeline-org {
+    font-size: 0.8rem;
+    color: var(--green);
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+.timeline-body p {
+    font-size: 0.86rem;
+    color: var(--ink-light);
+    line-height: 1.8;
+}
+
+/* Certs on about page */
+.about-certs {
+    background: var(--white);
+    padding: 7rem 0;
+}
+
+/* ── WORK WITH ME PAGE ───────────────────────────────── */
+.wm-offerings {
+    background: var(--cream);
+    padding: 6rem 0;
+}
+.offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+}
+.offering-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 2.8rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid var(--gold);
+    transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.offering-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 52px rgba(0,0,0,0.09);
+}
+.offering-num {
+    font-family: var(--ff-display);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--cream-dark);
+    line-height: 1;
+    margin-bottom: 1.2rem;
+}
+.offering-card h3 {
+    font-family: var(--ff-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    line-height: 1.25;
+}
+.offering-card p {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    line-height: 1.85;
+    margin-bottom: 1.4rem;
+    flex: 1;
+}
+.offering-card ul {
+    list-style: none;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.offering-card ul li {
+    font-size: 0.82rem;
+    color: var(--ink-mid);
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.5;
+}
+.offering-card ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+}
+.btn-offering {
+    display: inline-block;
+    background: var(--forest);
+    color: var(--white);
+    padding: 11px 24px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s var(--ease);
+    text-align: center;
+}
+.btn-offering:hover {
+    background: var(--green);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(44,84,56,0.28);
+}
+
+/* ── RESPONSIVE — NEW SECTIONS ───────────────────────── */
+@media (max-width: 1100px) {
+    .treks-grid { grid-template-columns: repeat(2, 1fr); }
+    .wk-layout { grid-template-columns: 1fr; gap: 3.5rem; }
+    .testi-grid { grid-template-columns: 1fr 1fr; }
+    .treks-season-grid { grid-template-columns: repeat(2, 1fr); }
+    .offerings-grid { grid-template-columns: 1fr 1fr; }
+    .about-story-layout { grid-template-columns: 1fr 1.3fr; gap: 3rem; }
+    .timeline-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+    .about-story-layout { grid-template-columns: 1fr; }
+    .about-portrait { position: static; max-width: 380px; }
+    .offerings-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .treks-grid { grid-template-columns: 1fr 1fr; }
+    .wk-tiles { grid-template-columns: 1fr 1fr; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .treks-season-grid { grid-template-columns: 1fr 1fr; }
+    .ut-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .page-hero { padding: 8rem 0 4rem; }
+    .upcoming-treks { padding: 4rem 0; }
+    .why-karan { padding: 5rem 0; }
+    .testimonials { padding: 5rem 0; }
+    .cta-banner { padding: 4.5rem 0; }
+}
+
+@media (max-width: 540px) {
+    .treks-grid { grid-template-columns: 1fr; }
+    .treks-season-grid { grid-template-columns: 1fr; }
+    .wk-tiles { grid-template-columns: 1fr; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .timeline-grid { grid-template-columns: 1fr; }
+    .testi-card { padding: 1.8rem 1.4rem; }
+    .cta-banner p { font-size: 0.92rem; }
+}

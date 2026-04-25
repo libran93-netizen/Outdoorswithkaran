@@ -1,0 +1,419 @@
+/* =========================================================
+   OUTDOORS WITH KARAN — Trek Detail Page Styles
+   ========================================================= */
+
+/* ── TREK HERO ───────────────────────────────────────── */
+.trek-hero {
+    position: relative;
+    height: 80vh;
+    min-height: 560px;
+    max-height: 800px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.trek-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+}
+
+.trek-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(5,15,8,0.90) 0%,
+        rgba(5,15,8,0.45) 45%,
+        rgba(5,15,8,0.2) 100%
+    );
+}
+
+.trek-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 64px 72px;
+    max-width: 820px;
+    color: var(--white);
+    animation: heroIn 1.2s var(--ease-out) both;
+}
+
+.trek-hero-content .eyebrow { color: var(--gold-light); }
+
+.trek-hero-content h1 {
+    font-family: var(--ff-display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+}
+
+.trek-hero-content .trek-hero-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.trek-hero-meta span {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.72);
+    letter-spacing: 0.3px;
+}
+.trek-hero-meta .diff-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 50px;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    color: var(--white);
+}
+
+/* ── QUICK STATS BAR ─────────────────────────────────── */
+.trek-stats-bar {
+    background: var(--forest);
+    padding: 0;
+}
+.trek-stats-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: stretch;
+}
+.trek-stat {
+    flex: 1;
+    padding: 1.6rem 1.4rem;
+    text-align: center;
+    color: var(--white);
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+.trek-stat:last-child { border-right: none; }
+.trek-stat-label {
+    display: block;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 0.35rem;
+}
+.trek-stat-value {
+    display: block;
+    font-family: var(--ff-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+}
+.trek-stat-sub {
+    display: block;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 0.15rem;
+}
+
+/* ── TREK BODY LAYOUT ────────────────────────────────── */
+.trek-body {
+    background: var(--white);
+    padding: 5rem 0 6rem;
+}
+.trek-body-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 5rem;
+    align-items: start;
+}
+
+/* ── TREK MAIN CONTENT ───────────────────────────────── */
+.trek-main h2 {
+    font-family: var(--ff-display);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+.trek-main h2:first-child { margin-top: 0; }
+
+.trek-main p {
+    font-size: 0.95rem;
+    color: var(--ink-light);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+}
+
+.trek-main ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.trek-main ul li {
+    font-size: 0.9rem;
+    color: var(--ink-light);
+    padding-left: 1.4rem;
+    position: relative;
+    line-height: 1.6;
+}
+.trek-main ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+/* Itinerary accordion */
+.itinerary-list {
+    border: 1px solid var(--cream-dark);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+.itin-day {
+    border-bottom: 1px solid var(--cream-dark);
+}
+.itin-day:last-child { border-bottom: none; }
+
+.itin-day-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 1.6rem;
+    cursor: pointer;
+    transition: background 0.25s;
+    user-select: none;
+}
+.itin-day-header:hover { background: var(--cream); }
+
+.itin-day.open .itin-day-header { background: var(--cream); }
+
+.itin-day-num {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green);
+    width: 3.5rem;
+    flex-shrink: 0;
+}
+.itin-day-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    flex: 1;
+}
+.itin-day-alt {
+    font-size: 0.75rem;
+    color: var(--ink-light);
+    flex-shrink: 0;
+}
+.itin-day-toggle {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+.itin-day.open .itin-day-toggle { transform: rotate(180deg); }
+
+.itin-day-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease), padding 0.3s;
+    padding: 0 1.6rem;
+    font-size: 0.88rem;
+    color: var(--ink-light);
+    line-height: 1.85;
+}
+.itin-day.open .itin-day-body {
+    max-height: 300px;
+    padding: 0 1.6rem 1.4rem;
+}
+
+/* Inclusions / Exclusions grid */
+.incl-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.incl-block h4 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--cream-dark);
+}
+.incl-block.excl h4 { color: var(--ink-light); }
+.incl-block ul { margin-bottom: 0; }
+.incl-block.excl ul li::before { content: '✕'; color: var(--ink-light); font-size: 0.7rem; }
+
+/* ── TREK SIDEBAR ────────────────────────────────────── */
+.trek-sidebar {
+    position: sticky;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.sidebar-card {
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 2rem;
+}
+
+.sidebar-card h3 {
+    font-family: var(--ff-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+}
+
+.sidebar-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--cream-dark);
+    font-size: 0.85rem;
+}
+.sidebar-info-row:last-of-type { border-bottom: none; }
+.sidebar-info-label { color: var(--ink-light); font-size: 0.78rem; }
+.sidebar-info-value { font-weight: 600; color: var(--ink); text-align: right; max-width: 60%; }
+
+.sidebar-price {
+    text-align: center;
+    padding: 1.6rem;
+    background: var(--forest);
+    border-radius: var(--radius);
+    color: var(--white);
+}
+.sidebar-price .price-label {
+    font-size: 0.65rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 0.4rem;
+}
+.sidebar-price .price-value {
+    font-family: var(--ff-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 0.2rem;
+}
+.sidebar-price .price-note {
+    font-size: 0.75rem;
+    opacity: 0.55;
+    margin-bottom: 1.4rem;
+    line-height: 1.5;
+}
+
+.btn-book-now {
+    display: block;
+    width: 100%;
+    background: var(--gold);
+    color: var(--forest);
+    padding: 13px;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.5px;
+    transition: all 0.3s var(--ease);
+    margin-bottom: 0.7rem;
+}
+.btn-book-now:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(200,160,80,0.35);
+}
+
+.btn-whatsapp-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    background: #25D366;
+    color: var(--white);
+    padding: 12px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: all 0.3s var(--ease);
+}
+.btn-whatsapp-sidebar:hover {
+    background: #20bc59;
+    transform: translateY(-2px);
+}
+.btn-whatsapp-sidebar svg { width: 16px; height: 16px; fill: white; }
+
+/* ── STICKY MOBILE BOOK BAR ──────────────────────────── */
+.sticky-book-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-top: 1px solid var(--cream-dark);
+    padding: 0.9rem 1.5rem;
+    z-index: 800;
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.1);
+    gap: 0.7rem;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 1100px) {
+    .trek-body-inner {
+        grid-template-columns: 1fr 300px;
+        gap: 3rem;
+    }
+    .trek-stats-inner { flex-wrap: wrap; }
+    .trek-stat { flex: 0 0 33.33%; }
+}
+
+@media (max-width: 900px) {
+    .trek-body-inner {
+        grid-template-columns: 1fr;
+    }
+    .trek-sidebar {
+        position: static;
+        order: -1;
+    }
+    .sticky-book-bar {
+        display: flex;
+    }
+    .trek-body { padding-bottom: 5rem; }
+}
+
+@media (max-width: 768px) {
+    .trek-hero-content { padding: 0 28px 60px; }
+    .trek-hero-content h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+    .trek-stat { flex: 0 0 50%; }
+    .incl-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 540px) {
+    .trek-stat { flex: 0 0 50%; }
+    .trek-body-inner { padding: 0 20px; }
+    .trek-hero-content { padding: 0 20px 56px; }
+}
