@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Main Pages -->
   <url>
     <loc>https://www.outdoorswithkaran.com/</loc>
-    <lastmod>2026-04-23</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.outdoorswithkaran.com/photos/IMG_20210304_100040.jpg</image:loc>
@@ -22,18 +23,111 @@
       <image:loc>https://www.outdoorswithkaran.com/photos/IMG_20210928_090821.jpg</image:loc>
       <image:title>Yunam Peak Expedition, Himachal Pradesh</image:title>
     </image:image>
-    <image:image>
-      <image:loc>https://www.outdoorswithkaran.com/photos/IMG_20220413_072929.jpg</image:loc>
-      <image:title>Stok Kangri Expedition, Ladakh</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.outdoorswithkaran.com/photos/drive-download-20260413T195100Z-3-001/GOPR6232.JPG</image:loc>
-      <image:title>Group Trek at Frozen Himalayan Lake</image:title>
-    </image:image>
   </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/about</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Trek Pages -->
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/everest-base-camp</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/annapurna-base-camp</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/kashmir-great-lakes</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/friendship-peak</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/manaslu-circuit</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/dayara-bugyal</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/kedarkhanta</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/ali-bedni-bugyal</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/har-ki-dun-ruinsara-tal</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/gaumukh-tapovan</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/brahmatal</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.outdoorswithkaran.com/treks/sandakphu-singalila</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Pages -->
   <url>
     <loc>https://www.outdoorswithkaran.com/blog</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -41,58 +135,73 @@
       <image:title>Kang Yatse 2 Expedition Story – Outdoors With Karan Journal</image:title>
     </image:image>
   </url>
+
   <url>
     <loc>https://www.outdoorswithkaran.com/blog/kang-yatse-2</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.outdoorswithkaran.com/photos/drive-download-20260413T195100Z-3-001/20220630_171032_0000__01.png</image:loc>
       <image:title>Standing on Kang Yatse 2 at 6,250m – Ladakh Expedition</image:title>
     </image:image>
   </url>
+
   <url>
     <loc>https://www.outdoorswithkaran.com/blog/yunam-peak</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.outdoorswithkaran.com/photos/IMG_20210928_090821.jpg</image:loc>
       <image:title>Yunam Peak 6,150m – First 6000m Expedition, Lahaul</image:title>
     </image:image>
   </url>
+
   <url>
     <loc>https://www.outdoorswithkaran.com/blog/children-himalayan-trail</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://www.outdoorswithkaran.com/blog/trek-leaders-kit</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://www.outdoorswithkaran.com/blog/hampi-edu-tour</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://www.outdoorswithkaran.com/blog/outdoor-learning-program</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://www.outdoorswithkaran.com/blog/rupin-pass-winter</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.outdoorswithkaran.com/photos/IMG_20201229_112649.jpg</image:loc>
       <image:title>Rupin Pass in Winter – Trek Leader's Assessment</image:title>
     </image:image>
+  </url>
+
+  <!-- Services/Contact -->
+  <url>
+    <loc>https://www.outdoorswithkaran.com/work-with-me</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
