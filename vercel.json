@@ -1,14 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "outdoorswithkaran.com" }],
-      "destination": "https://www.outdoorswithkaran.com/$1",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/photos/(.*)",
